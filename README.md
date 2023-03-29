@@ -22,7 +22,7 @@ maybe update with
 ````batch
 python.exe -m pip install --upgrade pip
 pre-commit autoupdate
-``` 
+```
 
 and run `pip install -e .[dev]` to setup the project locally.
 

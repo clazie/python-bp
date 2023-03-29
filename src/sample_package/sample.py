@@ -23,7 +23,10 @@ def play_random():
 class ProductionClass:
     def method(self):
         self.something(1, 2, 3)
-        pass
 
     def something(self, a, b, c):
         pass
+
+
+def print_me():
+    print("hallo")

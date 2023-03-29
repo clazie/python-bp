@@ -1,6 +1,8 @@
-from sample_package import sample
 from unittest import mock
+
 import pytest
+
+from sample_package import sample
 
 
 def test_sample():
@@ -32,3 +34,9 @@ def test_productionclass():
     instanz.something = mock.MagicMock()
     instanz.method()
     instanz.something.assert_called_once_with(1, 2, 3)
+
+
+def test_print_me(capsys):
+    sample.print_me()
+    captures = capsys.readouterr()
+    assert captures.out == "hallo\n"
