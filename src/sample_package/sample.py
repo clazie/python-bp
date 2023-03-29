@@ -30,3 +30,11 @@ class ProductionClass:
 
 def print_me():
     print("hallo")
+
+
+def is_not_flat(data):
+    return any(isinstance(i, list) for i in data)
+
+
+def sum_list(data):
+    return sum(data)

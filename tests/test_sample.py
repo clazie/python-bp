@@ -40,3 +40,16 @@ def test_print_me(capsys):
     sample.print_me()
     captures = capsys.readouterr()
     assert captures.out == "hallo\n"
+
+
+@pytest.fixture()
+def my_data():
+    return [1, 2, 3, 4]
+
+
+def test_is_not_flat(my_data):
+    assert sample.is_not_flat(my_data) is False
+
+
+def test_sum_list(my_data):
+    assert sample.sum_list(my_data) == 10
